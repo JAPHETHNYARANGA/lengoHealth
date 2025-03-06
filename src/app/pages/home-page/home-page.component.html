@@ -1,0 +1,109 @@
+<!-- Hero Section with Background Image -->
+<section class="relative bg-cover bg-center bg-no-repeat py-24" style="background-image: url('assets/homepage-bg.jpeg');">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white text-center relative">
+        <h1 class="text-6xl font-extrabold tracking-tight leading-tight">Welcome to Lengo Health Programme</h1>
+        <p class="mt-4 text-xl">Empowering communities through health awareness and sustainable initiatives. Together, we create a healthier future.</p>
+        <a (click)="navigateToInvolved()" class="mt-8 inline-block bg-yellow-500 text-blue-900 py-4 px-8 rounded-full text-lg font-semibold hover:bg-yellow-600 transition duration-300">
+            Get Involved
+        </a>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section class="py-20 bg-gray-100" id="about-us">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-blue-900">Our Purpose</h2>
+        <p class="mt-4 text-xl text-gray-700">At Lengo Health Programme, we believe in the power of knowledge and collaboration to make a lasting impact. Our mission, vision, and values drive us to improve the health and well-being of communities everywhere.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
+            <!-- Mission -->
+            <div class="p-8 bg-white shadow-lg rounded-lg">
+                <h3 class="text-2xl font-semibold text-blue-900">Our Mission</h3>
+                <p class="mt-4 text-gray-600">LeHP seeks to leverage community and other resources to enhance capacities and equip individuals to make informed health choices.</p>
+                <img src="assets/mission.svg" alt="Mission" class="mt-6 w-full h-48 object-cover rounded-lg">
+            </div>
+            <!-- Vision -->
+            <div class="p-8 bg-white shadow-lg rounded-lg">
+                <h3 class="text-2xl font-semibold text-blue-900">Our Vision</h3>
+                <p class="mt-4 text-gray-600">LeHP envisions a society where communities thrive through health awareness and comprehensive healthcare systems.</p>
+                <img src="assets/vision.svg" alt="Vision" class="mt-6 w-full h-48 object-cover rounded-lg">
+            </div>
+            <!-- Values -->
+            <div class="p-8 bg-white shadow-lg rounded-lg">
+                <h3 class="text-2xl font-semibold text-blue-900">Our Values</h3>
+                <ul class="mt-4 text-gray-600 space-y-3">
+                    <li><strong>Caring Attitude:</strong> Ensuring community well-being.</li>
+                    <li><strong>Integrity:</strong> Accountability and transparency in all actions.</li>
+                    <li><strong>Advocacy:</strong> Strengthening public health awareness for positive change.</li>
+                </ul>
+                <img src="assets/values.svg" alt="Values" class="mt-6 w-full h-48 object-cover rounded-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Work Section (Showcase the NGO's Impact) -->
+<section class="py-20 bg-white" id="our-work">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-blue-900">What We Do</h2>
+        <p class="mt-4 text-xl text-gray-700">We are committed to creating a tangible impact through community-focused initiatives. Below are a few of our key programs that are transforming lives across the globe.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
+            <!-- Program 1 -->
+            <div class="p-8 bg-gray-50 shadow-lg rounded-lg">
+                <img src="assets/logo.svg" alt="Healthcare Program" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="mt-6 text-2xl font-semibold text-blue-900">Healthcare Awareness</h3>
+                <p class="mt-4 text-gray-600">We provide essential health education, support, and medical outreach to underserved communities, ensuring that every individual can make informed health decisions.</p>
+            </div>
+            <!-- Program 2 -->
+            <div class="p-8 bg-gray-50 shadow-lg rounded-lg">
+                <img src="assets/logo.svg" alt="Education Program" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="mt-6 text-2xl font-semibold text-blue-900">Education for All</h3>
+                <p class="mt-4 text-gray-600">We focus on bringing educational resources to remote areas, empowering the next generation with the skills and knowledge to improve their lives and communities.</p>
+            </div>
+            <!-- Program 3 -->
+            <div class="p-8 bg-gray-50 shadow-lg rounded-lg">
+                <img src="assets/logo.svg" alt="Sustainability Program" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="mt-6 text-2xl font-semibold text-blue-900">Sustainability Initiatives</h3>
+                <p class="mt-4 text-gray-600">Our sustainability programs focus on environmental conservation and sustainable development, ensuring long-term prosperity for the communities we serve.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get Involved Section -->
+<section id="get-involved" class="py-20 bg-blue-900 text-white text-center">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h2 class="text-4xl font-bold">Join Us in Making a Difference</h2>
+        <p class="mt-4 text-xl">Support our initiatives through donations, volunteering, or partnerships. Together, we can create lasting change.</p>
+        <div class="mt-12 flex justify-center space-x-8">
+            <a (click)="navigateToInvolved()" class="inline-block bg-yellow-500 text-blue-900 py-4 px-8 rounded-full text-lg font-semibold hover:bg-yellow-600 transition duration-300">
+                Donate
+            </a>
+            <a (click)="navigateToInvolved()" class="inline-block bg-transparent border-2 border-white text-white py-4 px-8 rounded-full text-lg font-semibold hover:bg-white hover:text-blue-900 transition duration-300">
+                Volunteer
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section (Showcase Community Feedback) -->
+<section class="py-20 bg-gray-100" id="testimonials">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-blue-900">What Our Communities Say</h2>
+        <p class="mt-4 text-xl text-gray-700">We are proud of the difference we are making in the lives of individuals and communities. Here's what some of them have to say.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
+            <!-- Testimonial 1 -->
+            <div class="p-8 bg-white shadow-lg rounded-lg">
+                <p class="text-gray-600">"Lengo Health Programme helped us build a sustainable health initiative that has transformed our village. Their support has made a world of difference." - Amina, Community Leader</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="p-8 bg-white shadow-lg rounded-lg">
+                <p class="text-gray-600">"The education programs offered by LeHP opened doors for me and my family. We are now more aware of our health and future." - Karim, Beneficiary</p>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="p-8 bg-white shadow-lg rounded-lg">
+                <p class="text-gray-600">"Through LeHP's partnership, we have gained access to healthcare services we never thought possible. Thank you for your support!" - Fatima, Health Worker</p>
+            </div>
+        </div>
+    </div>
+</section>
