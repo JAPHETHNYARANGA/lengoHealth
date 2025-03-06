@@ -11,6 +11,8 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 import { InvolvedPageComponent } from './pages/involved-page/involved-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { FormsModule } from '@angular/forms';
+import { WhatsAppButtonComponent } from './components/whats-app-button/whats-app-button.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     AboutPageComponent,
     ProjectsPageComponent,
     InvolvedPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    WhatsAppButtonComponent
   ],
   imports: [
     BrowserModule,

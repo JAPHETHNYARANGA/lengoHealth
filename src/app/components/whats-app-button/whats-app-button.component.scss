@@ -1,0 +1,11 @@
+/* whatsapp-chat-button.component.scss */
+
+.whatsapp-chat-button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
