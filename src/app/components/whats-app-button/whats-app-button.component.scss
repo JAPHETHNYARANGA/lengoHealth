@@ -1,11 +1,23 @@
-/* whatsapp-chat-button.component.scss */
-
 .whatsapp-chat-button {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
+  position: fixed; /* Fix the button to the page */
+  bottom: 24px;    /* Distance from the bottom */
+  right: 24px;     /* Distance from the right */
+  z-index: 1000;   /* Ensure it's above other content */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow for better visibility */
+  transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+
+  &:hover {
+    background-color: #25D366; /* New background color on hover */
   }
-  
+}
+
+.whatsapp-chat-button a {
+  display: flex;
+  align-items: center;
+  space-x: 8px; /* Space between image and text */
+}
+
+.whatsapp-chat-button img {
+  width: 32px; /* WhatsApp icon size */
+  height: 32px;
+}

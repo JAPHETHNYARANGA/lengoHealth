@@ -2,6 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* styles.scss */
+/* styles.scss */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
 
 @layer utilities {
   /* Custom utility to handle smooth transitions */
@@ -9,3 +14,13 @@
     transition: transform 0.3s ease;
   }
 }
+
+/* Global styles */
+* {
+  font-family: 'Roboto', sans-serif; /* Modern, sans-serif font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
