@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-contact-page',
@@ -29,4 +30,8 @@ export class ContactPageComponent {
       console.log('Please fill out all fields');
     }
   }
+
+    ngOnInit() {
+      AOS.init();  // Initialize AOS
+    }
 }

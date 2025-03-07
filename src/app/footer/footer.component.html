@@ -6,17 +6,17 @@
           <img class="h-16 w-auto mx-auto sm:mx-0" src="assets/logo.svg" alt="NGO Logo">
           <p class="text-lg mt-2">Empowering Communities for a Better Tomorrow</p>
         </div>
-  
+    
         <!-- Quick Links -->
         <div class="flex flex-col sm:flex-row sm:space-x-10 text-center sm:text-left mb-6 sm:mb-0">
           <div class="flex flex-col space-y-2">
             <h4 class="font-semibold text-xl">Quick Links</h4>
             <a (click)="navigateToHome()" class="hover:text-gray-400">Home</a>
             <a (click)="navigateToAbout()" class="hover:text-gray-400">About Us</a>
-            <a  (click)="navigateToContact()" class="hover:text-gray-400">Contact us</a>
+            <a (click)="navigateToContact()" class="hover:text-gray-400">Contact Us</a>
             <a (click)="navigateToProjects()" class="hover:text-gray-400">Get Involved</a>
           </div>
-  
+    
           <!-- Social Media -->
           <div class="flex flex-col space-y-2">
             <h4 class="font-semibold text-xl">Follow Us</h4>
@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-  
+    
       <!-- Contact Section -->
       <div class="flex flex-col sm:flex-row sm:space-x-10 text-center sm:text-left mb-6 sm:mb-0">
         <!-- Contact Info -->
@@ -38,10 +38,23 @@
           <p class="text-gray-300">Website: <span class="text-white"> <a href="https://www.lengohp.org" class="hover:text-gray-400">www.lengohp.org</a> </span></p>
         </div>
       </div>
-  
+    
+      <!-- OpenStreetMap Section -->
+      <div class="mt-10">
+        <h4 class="text-center font-semibold text-xl mb-4">Our Location</h4>
+        <div class="w-full h-80">
+          <!-- OpenStreetMap Embed Code -->
+          <iframe 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=34.760597049713135%2C-0.12132815940207452%2C34.79985809326172%2C-0.08547072625697058&layer=mapnik"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    
       <!-- Footer Bottom Section -->
       <div class="border-t border-gray-700 pt-6 mt-6 text-center">
         <p class="text-sm">&copy; 2025 Lengo Health Programme. All rights reserved.</p>
       </div>
     </div>
   </footer>
+  
