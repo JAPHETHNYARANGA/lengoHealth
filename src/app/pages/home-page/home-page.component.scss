@@ -3,3 +3,59 @@
     height: 200px; /* Adjust this value as needed */
     object-fit: cover; /* Ensures the image covers the area without distortion */
 }
+
+
+/* Slider container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* Slider itself */
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Individual slide */
+  .slide {
+    min-width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide img {
+    width: 30rem;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Navigation buttons */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
