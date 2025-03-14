@@ -9,7 +9,7 @@ import * as AOS from 'aos';
 })
 export class HomePageComponent implements OnInit, OnDestroy {
   currentSlideIndex: number = 0;
-  totalSlides: number = 4;  // Number of slides
+  totalSlides: number = 5;  // Number of slides
   slideInterval: any; // To store the interval ID for auto-sliding
 
 
