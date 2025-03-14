@@ -12,6 +12,36 @@ export class HomePageComponent implements OnInit, OnDestroy {
   totalSlides: number = 4;  // Number of slides
   slideInterval: any; // To store the interval ID for auto-sliding
 
+
+   // Slide data (image, title, description)
+   slides = [
+    {
+      imageSrc: 'assets/image1.svg',
+      title: 'The use of mobile colposcopes',
+      description: 'using middle cadre staff who perform colposcopy using mobile colposcopes in the clinics and in the communities (health centers and Community-based Health Planning Services [CHPS] compounds). The mobile colposcope used at LeHP is the Enhanced Visual Assessment (EVA) system (MobileODT, Tel Aviv, Israel)'
+    },
+    {
+      imageSrc: 'assets/image2.svg',
+      title: 'Girls’ Health & Hygiene',
+      description: 'Clinical mentorship on cervical cancer screening and treatment for Nurses and clinical officers in Siaya County'
+    },
+    {
+      imageSrc: 'assets/image3.svg',
+      title: 'Girls’ Health & Hygiene',
+      description: 'Project Nurse offering health education to women on queue for screening'
+    },
+    {
+      imageSrc: 'assets/image4.svg',
+      title: 'Volunteership',
+      description: 'Community Health Volunteers during an outreach'
+    },
+    {
+      imageSrc: 'assets/image5.svg',
+      title: 'Helping Communities',
+      description: 'Community gatekeepers embrace health services to their communities. Area Chief supports LeHP activities and approach'
+    }
+  ];
+
   constructor(private router: Router) {}
 
   ngOnInit() {
@@ -20,7 +50,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
     // Auto slide every 2 seconds
     this.slideInterval = setInterval(() => {
       this.moveSlide(1); // Move to the next slide automatically
-    }, 2000);
+    }, 4000);
   }
 
   ngOnDestroy() {
