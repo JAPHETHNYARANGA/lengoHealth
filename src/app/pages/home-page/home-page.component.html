@@ -1,120 +1,114 @@
 <div class="home">
-  <!-- Hero Section with Background Image -->
-  <section
-    class="relative bg-cover bg-center bg-no-repeat py-24"
-    style="background-image: url('assets/homepage-bg.jpeg')"
-    data-aos="fade-up"
-  >
-    <div class="absolute inset-0 bg-teal-700 opacity-50"></div>
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white text-center relative">
-      <h1
-        class="text-6xl font-extrabold tracking-tight leading-tight"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        Welcome to Lengo Health Programme
+  <!-- Enhanced Hero Section -->
+  <section class="relative bg-cover bg-center bg-no-repeat py-32" style="background-image: url('assets/homepage-bg.jpeg')" data-aos="fade-up">
+    <div class="absolute inset-0 bg-teal-700 opacity-60"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white text-center relative z-10">
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+        Welcome to <span class="text-pink-300">Lengo Health Programme</span>
       </h1>
-      <p class="mt-4 text-xl" data-aos="fade-up" data-aos-delay="200">
-        Mobilizing resources to empower communities through health interventions
-        and awareness.
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+        Mobilizing resources to empower communities through innovative health interventions and awareness programs.
       </p>
-      <a
-        (click)="navigateToInvolved()"
-        class="mt-8 inline-block bg-teal-600 text-white py-4 px-8 rounded-full text-lg font-semibold hover:bg-red-800 transition duration-300"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        Get Involved
-      </a>
+      <div class="mt-10" data-aos="fade-up" data-aos-delay="300">
+        <a (click)="navigateToInvolved()" class="inline-block bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          Get Involved
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline ml-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- About Us Section -->
-  <section class="py-20 bg-pink-100" id="about-us" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-extrabold text-teal-900" data-aos="fade-up">
-        About Us
-      </h2>
-      <p class="mt-4 text-xl text-gray-700" data-aos="fade-up">
-        Lengo Health Programme (LeHP) is a national NGO registered in Kenya in
-        2013. Our mission is to mobilize resources locally and internationally
-        to enhance community health through public health research,
-        interventions, and advocacy.
-      </p>
+  <!-- About Us Section with Improved Layout -->
+  <section class="py-20 bg-gradient-to-b from-pink-50 to-pink-100" id="about-us">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-extrabold text-teal-900 mb-4">
+          About <span class="text-teal-600">Lengo Health</span>
+        </h2>
+        <div class="w-24 h-1 bg-teal-500 mx-auto mb-6"></div>
+        <p class="text-xl text-gray-700 max-w-4xl mx-auto">
+          Lengo Health Programme (LeHP) is a national NGO registered in Kenya in 2013. Our mission is to mobilize resources locally and internationally to enhance community health through public health research, interventions, and advocacy.
+        </p>
+      </div>
 
-      <!-- Download Report Button -->
-      <div class="mt-8">
-        <a
-          href="assets/2015cancer_report.pdf"
-          class="inline-block bg-teal-600 text-white py-4 px-8 rounded-full text-lg font-semibold hover:bg-teal-800 transition duration-300"
-          download
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
+      <!-- Download Report Button with Icon -->
+      <div class="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
+        <a href="assets/2015cancer_report.pdf" download class="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md hover:shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
           Download 2015 Breast and Cervical Report
         </a>
       </div>
 
-      <!-- The rest of the content (Mission, Vision, Values, etc.) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
-        <!-- Mission -->
-        <div
-          class="p-8 bg-white shadow-2xl rounded-lg hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-pink-100 hover:to-pink-200"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div class="text-center">
-            <h3 class="text-2xl font-semibold text-teal-900 mb-4">
-              Our Mission
-            </h3>
-            <p class="mt-4 text-gray-600">
-              LeHP seeks to leverage community resources to enhance capacities
-              and equip individuals to make informed health choices, improving
-              their quality of life.
+      <!-- Mission, Vision, Values Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Mission Card -->
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-8">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-center text-teal-900 mb-4">Our Mission</h3>
+            <p class="text-gray-600 text-center">
+              LeHP seeks to leverage community resources to enhance capacities and equip individuals to make informed health choices, improving their quality of life.
             </p>
           </div>
         </div>
-        <!-- Vision -->
-        <div
-          class="p-8 bg-white shadow-2xl rounded-lg hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-pink-100 hover:to-pink-200"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div class="text-center">
-            <h3 class="text-2xl font-semibold text-teal-900 mb-4">
-              Our Vision
-            </h3>
-            <p class="mt-4 text-gray-600">
-              LeHP envisions a society where individuals thrive in healthy
-              communities with well-functioning healthcare systems.
+
+        <!-- Vision Card -->
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-8">
+            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-center text-teal-900 mb-4">Our Vision</h3>
+            <p class="text-gray-600 text-center">
+              LeHP envisions a society where individuals thrive in healthy communities with well-functioning healthcare systems.
             </p>
           </div>
         </div>
-        <!-- Values -->
-        <div
-          class="p-8 bg-white shadow-2xl rounded-lg hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-pink-100 hover:to-pink-200"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <div class="text-center">
-            <h3 class="text-2xl font-semibold text-teal-900 mb-4">
-              Our Values
-            </h3>
-            <ul class="mt-4 text-gray-600 space-y-3">
-              <li>
-                <strong>Caring Attitude:</strong> Ensuring community well-being.
+
+        <!-- Values Card -->
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+          <div class="p-8">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-center text-teal-900 mb-4">Our Values</h3>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span><strong>Caring Attitude:</strong> Ensuring community well-being</span>
               </li>
-              <li>
-                <strong>Integrity and Accountability:</strong> Commitment to
-                ethical practices.
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span><strong>Integrity:</strong> Commitment to ethical practices</span>
               </li>
-              <li>
-                <strong>Advocacy:</strong> Promoting health awareness and
-                intervention.
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span><strong>Advocacy:</strong> Promoting health awareness</span>
               </li>
-              <li>
-                <strong>Diversity and Teamwork:</strong> Inclusivity in all our
-                efforts.
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span><strong>Diversity:</strong> Inclusivity in all our efforts</span>
               </li>
             </ul>
           </div>
@@ -123,230 +117,193 @@
     </div>
   </section>
 
-  <!-- Our Work Section -->
-  <section class="py-20 bg-white" id="our-work" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-extrabold text-teal-900" data-aos="fade-up">
-        What We Do
-      </h2>
-      <p class="mt-4 text-xl text-gray-700" data-aos="fade-up">
-        We are committed to creating a tangible impact through community-focused
-        initiatives. Below are a few of our key programs that are transforming
-        lives across the globe.
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
-        <!-- Program 1 -->
-        <div
-          class="p-8 bg-teal-100 shadow-2xl rounded-lg hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-teal-100 hover:to-teal-200"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <img
-            src="assets/logo.svg"
-            alt="Cervical Cancer Program"
-            class="w-full h-48 object-cover rounded-lg mb-6"
-          />
-          <h3 class="text-2xl font-semibold text-teal-900">
-            Cervical Cancer Awareness & Screening
-          </h3>
-          <p class="mt-4 text-gray-600">
-            Our cervical cancer program focuses on educating communities about
-            the risks, prevention methods, and early detection. We also offer
-            screening services to ensure early diagnosis and save lives.
-          </p>
-        </div>
-        <!-- Program 2 -->
-        <div
-          class="p-8 bg-teal-100 shadow-2xl rounded-lg hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-teal-100 hover:to-teal-200"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <img
-            src="assets/logo.svg"
-            alt="Education Program"
-            class="w-full h-48 object-cover rounded-lg mb-6"
-          />
-          <h3 class="text-2xl font-semibold text-teal-900">
-            ECD research and education program
-          </h3>
-          <p class="mt-4 text-gray-600">
-            Evidence-Driven Advocacy for Early Childhood Development
-          </p>
-          <ul class="list-disc ml-6 mt-2 text-gray-600 space-y-2">
-            <li><strong>Research-Backed</strong></li>
-            <li><strong>Community-Driven</strong></li>
-            <li><strong>Impact-Focused</strong></li>
-          </ul>
-          
-          <p class="mt-4 text-gray-600">
-            We are committed to creating an environment where every child learns and thrives, using research and evidence to drive advocacy and policy change in early childhood development (ECD). By leveraging our strong community networks, we consolidate scientific findings and real-world data to influence decision-making and resource allocation for ECD. We believe that investing in the early years of a child’s life yields lifelong socio-economic benefits, building stronger individuals, families, and societies. We aim to bridge the gap between evidence and action, ensuring that every child has the foundation to reach their full potential.
-          </p>
-          
-          
-        </div>
-        <!-- Program 3 -->
-        <div
-          class="p-8 bg-teal-100 shadow-2xl rounded-lg hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-teal-100 hover:to-teal-200"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <img
-            src="assets/logo.svg"
-            alt="Sustainability Program"
-            class="w-full h-48 object-cover rounded-lg mb-6"
-          />
-          <h3 class="text-2xl font-semibold text-teal-900">
-            Sustainability Initiatives
-          </h3>
-          <p class="mt-4 text-gray-600">
-            Our sustainability programs focus on environmental conservation and
-            sustainable development, ensuring long-term prosperity for the
-            communities we serve.
-          </p>
-        </div>
+  <!-- Our Work Section with Improved Cards -->
+  <section class="py-20 bg-white" id="our-work">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-extrabold text-teal-900 mb-4">
+          Our <span class="text-teal-600">Impactful</span> Programs
+        </h2>
+        <div class="w-24 h-1 bg-teal-500 mx-auto mb-6"></div>
+        <p class="text-xl text-gray-700 max-w-4xl mx-auto">
+          We are committed to creating tangible impact through community-focused initiatives that transform lives.
+        </p>
       </div>
 
-      <section class="py-20 bg-white">
-        <div
-          class="max-w-7xl mx-auto px-6 lg:px-8 text-center"
-          data-aos="fade-up"
-        >
-          <h2 class="text-4xl font-extrabold text-teal-900 mb-8">
-            Our Work in Action
-          </h2>
-          <div class="relative overflow-hidden">
-            <!-- Slider Container -->
-            <div class="slider-container relative" data-aos="fade-up">
-              <div
-                class="slider flex transition-transform duration-1000 ease-in-out"
-                [style.transform]="
-                  'translateX(-' + currentSlideIndex * 100 + '%)'
-                "
-              >
-                <!-- Slides dynamically created from the slides array -->
-                <div
-                  *ngFor="let slide of slides"
-                  class="slide w-full flex-shrink-0"
-                >
-                  <img
-                    [src]="slide.imageSrc"
-                    [alt]="'Slider ' + (slides.indexOf(slide) + 1)"
-                    class="w-3/4 h-64 object-cover rounded-xl shadow-lg mx-auto transition-transform duration-300 hover:scale-105"
-                  />
-                  <div
-                    class="description mt-4 px-6 py-4 bg-white bg-opacity-80 rounded-xl mx-auto max-w-xs"
-                  >
-                    <h3 class="text-2xl font-semibold text-teal-900">
-                      {{ slide.title }}
-                    </h3>
-                    <p class="text-gray-600">
-                      {{ slide.description }}
-                    </p>
-                  </div>
-                </div>
-              </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Program 1 -->
+        <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 overflow-hidden">
+            <img src="assets/logo.svg" alt="Cervical Cancer Program" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold text-teal-900 mb-4">Cervical Cancer Awareness & Screening</h3>
+            <p class="text-gray-600 mb-6">
+              Our cervical cancer program focuses on educating communities about risks, prevention methods, and early detection through accessible screening services.
+            </p>
+            <a href="#" class="text-teal-600 font-semibold hover:text-teal-800 flex items-center transition duration-300">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
 
-              <!-- Slider Navigation -->
-              <button
-                class="prev absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black opacity-60 hover:opacity-100 rounded-full p-4 transition duration-300"
-                (click)="moveSlide(-1)"
-              >
-                &#10094;
-              </button>
-              <button
-                class="next absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black opacity-60 hover:opacity-100 rounded-full p-4 transition duration-300"
-                (click)="moveSlide(1)"
-              >
-                &#10095;
-              </button>
+        <!-- Program 2 -->
+        <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-48 overflow-hidden">
+            <img src="assets/logo.svg" alt="Education Program" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold text-teal-900 mb-4">ECD Research & Education</h3>
+            <p class="text-gray-600 mb-4">
+              Evidence-Driven Advocacy for Early Childhood Development:
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Research-Backed Approaches</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Community-Driven Solutions</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Impact-Focused Implementation</span>
+              </li>
+            </ul>
+            <a href="#" class="text-pink-600 font-semibold hover:text-pink-800 flex items-center transition duration-300">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+          <div class="h-48 overflow-hidden">
+            <img src="assets/logo.svg" alt="Sustainability Program" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold text-teal-900 mb-4">Sustainability Initiatives</h3>
+            <p class="text-gray-600 mb-6">
+              Our sustainability programs focus on environmental conservation and sustainable development, ensuring long-term prosperity for the communities we serve.
+            </p>
+            <a href="#" class="text-teal-600 font-semibold hover:text-teal-800 flex items-center transition duration-300">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Get Involved Section -->
+  <section id="get-involved" class="py-20 bg-gradient-to-r from-teal-700 to-teal-800 text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <div class="max-w-3xl mx-auto" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-6">Join Us in Making a Difference</h2>
+        <p class="text-xl mb-10">
+          Support our initiatives through donations, volunteering, or partnerships. Together, we can create lasting change in communities.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6" data-aos="fade-up" data-aos-delay="100">
+          <a (click)="navigateToInvolved()" class="flex-1 max-w-xs mx-auto bg-white text-teal-800 hover:bg-gray-100 font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            Donate Now
+          </a>
+          <a (click)="navigateToInvolved()" class="flex-1 max-w-xs mx-auto bg-transparent border-2 border-white hover:bg-white hover:text-teal-800 font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            Volunteer
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section with Carousel -->
+  <section class="py-20 bg-gradient-to-b from-pink-50 to-pink-100" id="testimonials">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-extrabold text-teal-900 mb-4">
+          Community <span class="text-teal-600">Voices</span>
+        </h2>
+        <div class="w-24 h-1 bg-teal-500 mx-auto mb-6"></div>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+          Hear from those whose lives have been touched by our programs
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 relative transition-all duration-500 hover:shadow-xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute -top-6 -left-6 w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+          </div>
+          <p class="text-gray-600 italic mb-6">
+            "Lengo Health Programme helped us build a sustainable health initiative that has transformed our village. Their support has made a world of difference."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-teal-100 rounded-full mr-4"></div>
+            <div>
+              <h4 class="font-bold text-teal-900">Ang'asa</h4>
+              <p class="text-sm text-gray-500">Community Leader</p>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  </section>
 
-  <!-- Get Involved Section -->
-  <section
-    id="get-involved"
-    class="py-20 bg-teal-700 text-white text-center"
-    data-aos="fade-up"
-  >
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <h2 class="text-4xl font-bold" data-aos="fade-up">
-        Join Us in Making a Difference
-      </h2>
-      <p class="mt-4 text-xl" data-aos="fade-up">
-        Support our initiatives through donations, volunteering, or
-        partnerships. Together, we can create lasting change.
-      </p>
-      <div class="mt-12 flex justify-center space-x-8" data-aos="fade-up">
-        <a
-          (click)="navigateToInvolved()"
-          class="inline-block bg-teal-500 text-teal-900 py-4 px-8 rounded-full text-lg font-semibold hover:bg-teal-600 transition duration-300"
-        >
-          Donate
-        </a>
-        <a
-          (click)="navigateToInvolved()"
-          class="inline-block bg-transparent border-2 border-white text-white py-4 px-8 rounded-full text-lg font-semibold hover:bg-white hover:text-teal-900 transition duration-300"
-        >
-          Volunteer
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="py-20 bg-pink-100" id="testimonials" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-extrabold text-teal-900" data-aos="fade-up">
-        What Our Communities Say
-      </h2>
-      <p class="mt-4 text-xl text-gray-700" data-aos="fade-up">
-        We are proud of the difference we are making in the lives of individuals
-        and communities. Here's what some of them have to say.
-      </p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
-        <!-- Testimonial 1 -->
-        <div
-          class="p-8 bg-white shadow-2xl rounded-lg hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-pink-100 hover:to-pink-200"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <p class="text-gray-600">
-            "Lengo Health Programme helped us build a sustainable health
-            initiative that has transformed our village. Their support has made
-            a world of difference." - Ang'asa, Community Leader
-          </p>
-        </div>
         <!-- Testimonial 2 -->
-        <div
-          class="p-8 bg-white shadow-2xl rounded-lg hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-pink-100 hover:to-pink-200"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <p class="text-gray-600">
-            "The education programs offered by LeHP opened doors for me and my
-            family. We are now more aware of our health and future." - Peter Okello,
-            Beneficiary
+        <div class="bg-white rounded-xl shadow-lg p-8 relative transition-all duration-500 hover:shadow-xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+          <div class="absolute -top-6 -left-6 w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+          </div>
+          <p class="text-gray-600 italic mb-6">
+            "The education programs offered by LeHP opened doors for me and my family. We are now more aware of our health and future."
           </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-pink-100 rounded-full mr-4"></div>
+            <div>
+              <h4 class="font-bold text-teal-900">Peter Okello</h4>
+              <p class="text-sm text-gray-500">Program Beneficiary</p>
+            </div>
+          </div>
         </div>
+
         <!-- Testimonial 3 -->
-        <div
-          class="p-8 bg-white shadow-2xl rounded-lg hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-pink-100 hover:to-pink-200"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <p class="text-gray-600">
-            "Through LeHP's partnership, we have gained access to healthcare
-            services we never thought possible. Thank you for your support!" -
-            Mary Anyango, Health Worker
+        <div class="bg-white rounded-xl shadow-lg p-8 relative transition-all duration-500 hover:shadow-xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+          <div class="absolute -top-6 -left-6 w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+          </div>
+          <p class="text-gray-600 italic mb-6">
+            "Through LeHP's partnership, we have gained access to healthcare services we never thought possible. Thank you for your support!"
           </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-teal-100 rounded-full mr-4"></div>
+            <div>
+              <h4 class="font-bold text-teal-900">Mary Anyango</h4>
+              <p class="text-sm text-gray-500">Health Worker</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
   <app-whats-app-button></app-whats-app-button>
 </div>
