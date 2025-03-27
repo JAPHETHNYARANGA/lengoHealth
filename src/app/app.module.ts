@@ -12,6 +12,7 @@ import { InvolvedPageComponent } from './pages/involved-page/involved-page.compo
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { FormsModule } from '@angular/forms';
 import { WhatsAppButtonComponent } from './components/whats-app-button/whats-app-button.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { WhatsAppButtonComponent } from './components/whats-app-button/whats-app
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
