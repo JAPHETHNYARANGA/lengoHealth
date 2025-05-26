@@ -2,6 +2,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import * as AOS from 'aos';
 
+import { Activity } from '../../interfaces/activity';
+import { ActivitiesService } from 'src/app/httpSevices/activities/activities.service';
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -9,52 +12,58 @@ import * as AOS from 'aos';
 })
 export class HomePageComponent implements OnInit, OnDestroy {
   currentSlideIndex: number = 0;
-  totalSlides: number = 5;  // Number of slides
-  slideInterval: any; // To store the interval ID for auto-sliding
+  slideInterval: any;
+  slides: Activity[] = [];
+  isLoading: boolean = true;
+  error: string | null = null;
 
-
-   // Slide data (image, title, description)
-   slides = [
-    {
-      imageSrc: 'assets/image1.svg',
-      title: 'The use of mobile colposcopes',
-      description: 'using middle cadre staff who perform colposcopy using mobile colposcopes in the clinics and in the communities (health centers and Community-based Health Planning Services [CHPS] compounds). The mobile colposcope used at LeHP is the Enhanced Visual Assessment (EVA) system (MobileODT, Tel Aviv, Israel)'
-    },
-    {
-      imageSrc: 'assets/image2.svg',
-      title: 'Girls’ Health & Hygiene',
-      description: 'Clinical mentorship on cervical cancer screening and treatment for Nurses and clinical officers in Siaya County'
-    },
-    {
-      imageSrc: 'assets/image3.svg',
-      title: 'Girls’ Health & Hygiene',
-      description: 'Project Nurse offering health education to women on queue for screening'
-    },
-    {
-      imageSrc: 'assets/image4.svg',
-      title: 'Volunteership',
-      description: 'Community Health Volunteers during an outreach'
-    },
-    {
-      imageSrc: 'assets/image5.svg',
-      title: 'Helping Communities',
-      description: 'Community gatekeepers embrace health services to their communities. Area Chief supports LeHP activities and approach'
-    }
-  ];
-
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private activitiesService: ActivitiesService
+  ) {}
 
   ngOnInit() {
-    AOS.init();  // Initialize AOS
+    AOS.init();
+    this.loadActivities();
+  }
 
-    // Auto slide every 2 seconds
+  loadActivities() {
+    this.activitiesService.getActivities().subscribe({
+      next: (response: any) => {
+        if (response.success && response.data) {
+          this.slides = response.data.map((activity: Activity) => ({
+            ...activity,
+            // Use image_url from API if available, otherwise fallback to image_src
+            imageSrc: activity.image_url || activity.image_src
+          }));
+        }
+        this.isLoading = false;
+      },
+      error: (err) => {
+        console.error('Error loading activities:', err);
+        this.error = 'Failed to load activities. Please try again later.';
+        this.isLoading = false;
+      
+      },
+      complete: () => {
+        // Start slideshow after data is loaded
+        this.startSlideshow();
+      }
+    });
+  }
+
+ 
+
+  startSlideshow() {
+    if (this.slideInterval) {
+      clearInterval(this.slideInterval);
+    }
     this.slideInterval = setInterval(() => {
-      this.moveSlide(1); // Move to the next slide automatically
+      this.moveSlide(1);
     }, 4000);
   }
 
   ngOnDestroy() {
-    // Clear the interval when the component is destroyed to avoid memory leaks
     if (this.slideInterval) {
       clearInterval(this.slideInterval);
     }
@@ -64,17 +73,32 @@ export class HomePageComponent implements OnInit, OnDestroy {
     this.router.navigate(['involved']);
   }
 
-  // Method to move to the next/previous slide
   moveSlide(direction: number): void {
     this.currentSlideIndex += direction;
 
     if (this.currentSlideIndex < 0) {
-      this.currentSlideIndex = this.totalSlides - 1; // Loop back to the last slide
-    } else if (this.currentSlideIndex >= this.totalSlides) {
-      this.currentSlideIndex = 0; // Loop back to the first slide
+      this.currentSlideIndex = this.slides.length - 1;
+    } else if (this.currentSlideIndex >= this.slides.length) {
+      this.currentSlideIndex = 0;
     }
 
+    this.updateSliderPosition();
+  }
+
+  goToSlide(index: number): void {
+    this.currentSlideIndex = index;
+    this.updateSliderPosition();
+    // Reset the auto-slide timer when user manually changes slide
+    clearInterval(this.slideInterval);
+    this.slideInterval = setInterval(() => {
+      this.moveSlide(1);
+    }, 4000);
+  }
+
+  private updateSliderPosition(): void {
     const slider = document.querySelector('.slider') as HTMLElement;
-    slider.style.transform = `translateX(-${this.currentSlideIndex * 100}%)`;
+    if (slider) {
+      slider.style.transform = `translateX(-${this.currentSlideIndex * 100}%)`;
+    }
   }
 }

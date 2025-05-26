@@ -316,24 +316,7 @@
               risks, prevention methods, and early detection through accessible
               screening services.
             </p>
-            <a
-              href="#"
-              class="text-teal-600 font-semibold hover:text-teal-800 flex items-center transition duration-300"
-            >
-              Learn more
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 ml-1"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
+          
           </div>
         </div>
 
@@ -408,24 +391,7 @@
                 <span>Impact-Focused Implementation</span>
               </li>
             </ul>
-            <a
-              href="#"
-              class="text-pink-600 font-semibold hover:text-pink-800 flex items-center transition duration-300"
-            >
-              Learn more
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 ml-1"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
+            
           </div>
         </div>
 
@@ -455,29 +421,71 @@
               and sustainable development, ensuring long-term prosperity for the
               communities we serve.
             </p>
-            <a
-              href="#"
-              class="text-teal-600 font-semibold hover:text-teal-800 flex items-center transition duration-300"
-            >
-              Learn more
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 ml-1"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
+            
           </div>
         </div>
       </div>
     </div>
   </section>
+
+<!-- Activities Slideshow Section -->
+<section class="py-20 bg-gradient-to-b from-teal-50 to-teal-100" id="activities">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl font-extrabold text-teal-900 mb-4">
+        Our <span class="text-teal-600">Activities</span> in Action
+      </h2>
+      <div class="w-24 h-1 bg-teal-500 mx-auto mb-6"></div>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto">
+        See how we're making a difference through our various programs and community initiatives.
+      </p>
+    </div>
+
+    <!-- Slideshow Container -->
+    <div class="relative max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl" data-aos="fade-up">
+      <!-- Slides -->
+      <div class="slider flex transition-transform duration-500 ease-in-out">
+        <div *ngFor="let slide of slides" class="min-w-full">
+          <div class="bg-white p-8">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+              <div class="md:w-1/2">
+                <img 
+                  [src]="slide.image_url" 
+                  [alt]="slide.title" 
+                  class="w-full h-64 md:h-96 object-cover rounded-lg shadow-md"
+                >
+              </div>
+              <div class="md:w-1/2">
+                <h3 class="text-2xl font-bold text-teal-800 mb-4">{{ slide.title }}</h3>
+                <p class="text-gray-600 mb-6">{{ slide.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button 
+        (click)="moveSlide(-1)"
+        class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-teal-800 p-2 rounded-full shadow-md z-10 transition-all duration-300 hover:scale-110"
+        aria-label="Previous slide"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button 
+        (click)="moveSlide(1)"
+        class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-teal-800 p-2 rounded-full shadow-md z-10 transition-all duration-300 hover:scale-110"
+        aria-label="Next slide"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
 
   <!-- Enhanced Get Involved Section -->
   <section
